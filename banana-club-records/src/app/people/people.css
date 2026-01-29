@@ -1,0 +1,279 @@
+.bio-card {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ZONA IMAGEN */
+.bio-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.media-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+/* TEXTO */
+.bio-text {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bio-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.bio-text h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 1.6rem;
+}
+
+.bio-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .bio-card {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-media {
+    height: 260px;
+  }
+}
+
+
+/* CARRUSEL */
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.4s ease;
+}
+
+.bio-media:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.nav:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+}
+
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('/assets/images/fondo-about.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+
+:host::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 13, 13, 0.8);
+  z-index: 0;
+}
+
+
+
+/* MINI NAV */
+.mini-nav {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.mini-nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* HOVER BANANA 🍌 */
+.mini-nav a:hover {
+  color: rgba(242, 211, 107, 0.9);
+  opacity: 1;
+}
+
+/* SUBRAYADO SUAVE */
+.mini-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(242, 211, 107, 0.8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.mini-nav a:hover::after,
+.mini-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.mini-nav a.active {
+  color: rgba(242, 211, 107, 1);
+  opacity: 1;
+}
+
+.bio-text h1 {
+  color: rgba(242, 211, 107, 0.95);
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+
+/* BIO SOCIALS - estilo Home */
+.bio-socials {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.bio-socials a {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICONOS (MISMO ADN QUE HOME) */
+.social-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 0 rgba(242, 211, 107, 0));
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Escalas específicas */
+.social-icon.instagram {
+  transform: scale(0.7);
+}
+
+/* Hover individual */
+.social-icon:hover.beatport,
+.social-icon:hover.soundcloud {
+  transform: scale(1.6);
+  opacity: 1;
+}
+
+.social-icon:hover.instagram {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Glow Banana */
+.social-icon:hover {
+  filter: drop-shadow(0 0 3px rgba(242, 211, 107, 0.18));
+}
+
+/* BACK ARROW */
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: none;
+  border: none;
+  color: rgba(242, 211, 107, 0.9);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+
+
+

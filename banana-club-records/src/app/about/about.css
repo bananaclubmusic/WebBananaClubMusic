@@ -1,0 +1,136 @@
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('/assets/images/fondo-about.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*filter: saturate(0.9) contrast(0.95);
+
+   */
+}
+
+
+:host::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 13, 13, 0.8);
+  z-index: 0;
+}
+
+
+.about-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* LAYOUT GENERAL */
+.about-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+/* CONTENIDO */
+.about-content {
+  max-width: 640px;
+  text-align: left;
+}
+
+/* TÍTULO */
+.about-title {
+  font-family: 'Bulltoz02', 'Bulltoz03', 'BananaFont', Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.1em; /* un poco menos, más elegante */
+  margin-bottom: 40px;
+}
+
+
+/* TEXTO */
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #cfcfcf;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+
+
+/* TEXTO DESTACADO */
+.about-highlight {
+  color: #ffffff;
+  border-left: 2px solid #f2d36b;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.brand {
+  color: #f2d36b;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+
+
+
+
+
+/* LINK VOLVER */
+.back-link {
+  display: inline-block;
+  margin-top: 60px;
+  color: #f2d36b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.demo-link {
+  color: #f2d36b;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(242, 211, 107, 0.4);
+  transition: opacity 0.3s ease;
+}
+
+.demo-link:hover {
+  opacity: 0.7;
+}
+
+/* BACK ARROW */
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: none;
+  border: none;
+  color: rgba(242, 211, 107, 0.9);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+

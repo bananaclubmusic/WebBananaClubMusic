@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Bulltoz03';
+  src: url('/assets/fonts/LK_BULLTOZ-03-BF676dfd974bac6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bulltoz02';
+  src: url('/assets/fonts/LK_BULLTOZ-02-BF676dfd975984f.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

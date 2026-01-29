@@ -1,0 +1,80 @@
+<section class="people">
+
+  <button class="back-arrow" (click)="goBack()" aria-label="Volver">
+    ←
+  </button>
+
+  <nav class="mini-nav">
+    <a routerLink="/" routerLinkActive="active">Inicio</a>
+    <a routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
+  </nav>
+
+  <!-- Tarjeta biografía -->
+  <article class="bio-card">
+
+    <!-- IMÁGENES / CARRUSEL -->
+    <div class="bio-media">
+
+      <div class="carousel">
+        <div
+          class="carousel-track"
+          [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+        >
+          <img src="assets/images/founder.jpg" alt="FM-3 1">
+          <img src="assets/images/founder2.jpg" alt="FM-3 2">
+          <img src="assets/images/founder3.jpg" alt="FM-3 3">
+        </div>
+      </div>
+
+      <button class="nav prev" (click)="prev()">‹</button>
+      <button class="nav next" (click)="next()">›</button>
+
+    </div>
+
+
+    <!-- TEXTO -->
+    <div class="bio-text">
+      <h1>FM-3</h1>
+      <h2>Fundador</h2>
+
+      <p>
+        FM-3, creador del sello Banana Club, es sinónimo de energía en la escena
+        breakbeat. Con un recorrido que lo ha llevado de los clubs andaluces hasta
+        escenarios en Estados Unidos y Reino Unido, se ha consolidado como uno de
+        los DJs más potentes y versátiles del género.
+      </p>
+
+      <div class="bio-socials">
+        <a href="https://www.instagram.com/fmguion3/" target="_blank" aria-label="Instagram">
+          <img
+            src="assets/images/instagram.png"
+            alt="Instagram"
+            class="social-icon instagram"
+          >
+        </a>
+
+        <a href="https://soundcloud.com/franmarchantres" target="_blank" aria-label="SoundCloud">
+          <img
+            src="assets/images/soundcloud.png"
+            alt="SoundCloud"
+            class="social-icon soundcloud"
+          >
+        </a>
+
+        <a href="https://beatport.com/artist/fm-3/402033" target="_blank" aria-label="Beatport">
+          <img
+            src="assets/images/beatport.svg"
+            alt="Beatport"
+            class="social-icon beatport"
+          >
+        </a>
+      </div>
+
+
+    </div>
+
+  </article>
+
+
+
+</section>

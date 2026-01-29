@@ -1,0 +1,58 @@
+<div class="floating-bg"></div>
+
+<!-- HAMBURGER NAV -->
+<div class="hamburger-nav">
+
+  <button class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="hamburger-menu" [class.open]="menuOpen">
+    <a routerLink="/about">Sobre Nosotros</a>
+    <a routerLink="/people">Fundador</a>
+  </nav>
+
+</div>
+
+<!-- CTA CENTRADO REAL -->
+<div class="center-cta">
+  <a
+    class="demo-button"
+    href="mailto:demos@tusello.com?subject=Demo%20Submission"
+  >
+    ENVIAR DEMO
+  </a>
+</div>
+
+<main class="home-layout">
+
+  <!-- ZONA SUPERIOR -->
+  <section class="home-top">
+    <h1 class="home-title">BANANA CLUB</h1>
+  </section>
+
+  <!-- ZONA INFERIOR (REDES) -->
+  <section class="home-middle">
+
+    <a href="https://www.instagram.com/banana_club_music/" target="_blank" rel="noopener">
+      <img src="assets/images/instagram.png" alt="Instagram" class="social-icon instagram">
+    </a>
+
+    <a href="https://soundcloud.com/thebananaclub" target="_blank" rel="noopener">
+      <img src="assets/images/soundcloud.png" alt="SoundCloud" class="social-icon soundcloud">
+    </a>
+
+    <a href="https://www.beatport.com/label/banana-club/87402" target="_blank" rel="noopener">
+      <img src="assets/images/beatport.svg" alt="Beatport" class="social-icon beatport">
+    </a>
+  </section>
+
+  <footer class="footer-legal">
+    <p>© Banana Club Music. </p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+
+
+</main>

@@ -1,0 +1,272 @@
+:host {
+  width: 100%;
+  height: 100vh;
+}
+
+/* LAYOUT GENERAL */
+.home-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ← CLAVE */
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+/* ZONA SUPERIOR
+.home-top {
+  text-align: center;
+  padding-top: 20px;
+}
+ */
+
+.home-top {
+  display: flex;
+  gap: 30px;
+  margin-bottom: calc(10vh - 28px);
+
+
+}
+
+
+.home-title {
+  font-family: 'Bulltoz03', 'BananaFont', Arial, Helvetica, sans-serif;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+
+/* ZONA CENTRAL */
+.home-middle {
+  display: flex;
+  gap: 30px;
+  margin-top: auto;
+  margin-bottom: calc(23vh - 28px);
+}
+
+
+
+.social {
+  color: #f2d36b;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border: 1px solid #f2d36b;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.social:hover {
+  background-color: #f2d36b;
+  color: #0d0d0d;
+}
+
+
+.home-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.demo-button {
+  font-size: 1.1rem;
+  padding: 18px 36px;
+  letter-spacing: 0.2em;
+}
+
+.center-cta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+
+/* CONTENEDOR DE CADA ICONO */
+.home-middle a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICONOS */
+.social-icon  {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon.instagram {
+  transform: scale(0.7);
+}
+
+
+
+.social-icon:hover.beatport{
+  transform: scale(1.6);
+  opacity: 1;
+}
+
+.social-icon:hover.soundcloud{
+  transform: scale(1.6);
+  opacity: 1;
+}
+
+.social-icon:hover.instagram{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.social-icon {
+  filter: drop-shadow(0 0 0 rgba(242, 211, 107, 0));
+  transition: transform 0.3s ease,
+  opacity 0.3s ease,
+  filter 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: drop-shadow(0 0 3px rgba(242, 211, 107, 0.18));
+}
+
+
+.home-title {
+  transition:
+    transform 0.4s ease,
+    letter-spacing 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.home-title:hover {
+  transform: translateY(-4px);
+  letter-spacing: 0.18em;
+  text-shadow:
+    0 0 8px rgba(242, 211, 107, 0.25),
+    0 0 18px rgba(242, 211, 107, 0.12);
+}
+
+:host {
+  --floating-size: min(60vw, 700px);
+}
+
+
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--floating-size);
+  height: var(--floating-size);
+  background-image: url('/assets/images/bananin.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+.home-layout {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .social-icon {
+    width: 40px;
+  }
+
+  .home-middle {
+    gap: 24px;
+  }
+}
+
+
+/* HAMBURGER NAV */
+.hamburger-nav {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 10;
+}
+
+/* BOTÓN ☰ */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background-color: #f2d36b;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger:hover span {
+  opacity: 1;
+}
+
+/* MENÚ DESPLEGABLE */
+.hamburger-menu {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-menu a {
+  color: #f2d36b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger-menu a:hover {
+  opacity: 1;
+}
+
+/* ESTADO ABIERTO */
+.hamburger-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.footer-legal {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.70rem;
+  color: #bdbdbd;
+  opacity: 0.6;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.footer-legal p {
+  margin: 2px 0;
+}
+
