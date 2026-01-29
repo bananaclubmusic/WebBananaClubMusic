@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/banana-club-records/browser",
+            "outputPath": "dist/banana-club-records",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
