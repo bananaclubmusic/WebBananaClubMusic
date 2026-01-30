@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url('/assets/images/fondo-about.png');
+  background-image: url('../../assets/images/fondo-about.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
