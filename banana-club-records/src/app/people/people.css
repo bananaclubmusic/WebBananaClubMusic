@@ -274,6 +274,12 @@
   transform: translateX(-4px);
 }
 
+@media (max-width: 600px) {
+  .mini-nav {
+    display: none;
+  }
+
+}
 
 
 
