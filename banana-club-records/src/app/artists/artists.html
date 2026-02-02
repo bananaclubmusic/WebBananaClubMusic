@@ -1,0 +1,151 @@
+<section class="artists">
+
+  <!-- BACK -->
+  <button class="back-arrow" routerLink="/" aria-label="Volver">
+    ←
+  </button>
+
+  <!-- MINI NAV -->
+  <nav class="mini-nav">
+    <a routerLink="/" routerLinkActive="active">Inicio</a>
+    <a routerLink="/people" routerLinkActive="active">Fundador</a>
+    <a routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
+  </nav>
+
+  <!-- GRID -->
+  <div class="artists-grid">
+
+    <article
+      class="artist-card"
+      *ngFor="let artist of artists"
+    >
+
+      <!-- IMAGE / TRIGGER -->
+      <div
+        class="artist-media"
+        (click)="openModal(artist)"
+      >
+        <img
+          [src]="artist.images[0]"
+          [alt]="artist.name"
+        >
+      </div>
+
+      <!-- NAME -->
+      <h2 class="artist-name">
+        {{ artist.name }}
+      </h2>
+
+    </article>
+
+  </div>
+
+  <!-- MODAL -->
+  <div
+    class="artist-modal"
+    *ngIf="activeArtist"
+    (click)="closeModal()"
+  >
+
+    <div
+      class="artist-modal-content"
+      (click)="$event.stopPropagation()"
+    >
+
+      <!-- CLOSE -->
+      <button
+        class="modal-close"
+        (click)="closeModal()"
+        aria-label="Cerrar"
+      >
+        ×
+      </button>
+
+      <!-- MEDIA -->
+      <div class="modal-media">
+
+        <div class="carousel">
+          <div
+            class="carousel-track"
+            [style.transform]="'translateX(-' + activeArtist.currentIndex * 100 + '%)'"
+          >
+            <img
+              *ngFor="let img of activeArtist.images"
+              [src]="img"
+              [alt]="activeArtist.name"
+            >
+          </div>
+        </div>
+
+        <button
+          class="nav prev"
+          (click)="prevImage(activeArtist)"
+        >
+          ‹
+        </button>
+
+        <button
+          class="nav next"
+          (click)="nextImage(activeArtist)"
+        >
+          ›
+        </button>
+
+      </div>
+
+      <!-- TEXT -->
+      <div class="modal-text">
+
+        <h1>{{ activeArtist.name }}</h1>
+
+        <p>
+          {{ activeArtist.description }}
+        </p>
+
+        <div class="artist-socials">
+
+          <a
+            *ngIf="activeArtist.instagram"
+            [href]="activeArtist.instagram"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img
+              src="assets/images/instagram.png"
+              class="social-icon instagram"
+            >
+          </a>
+
+          <a
+            *ngIf="activeArtist.soundcloud"
+            [href]="activeArtist.soundcloud"
+            target="_blank"
+            aria-label="SoundCloud"
+          >
+            <img
+              src="assets/images/soundcloud.png"
+              class="social-icon soundcloud"
+            >
+          </a>
+
+          <a
+            *ngIf="activeArtist.beatport"
+            [href]="activeArtist.beatport"
+            target="_blank"
+            aria-label="Beatport"
+          >
+            <img
+              src="assets/images/beatport.svg"
+              class="social-icon beatport"
+            >
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
