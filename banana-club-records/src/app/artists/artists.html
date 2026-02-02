@@ -44,6 +44,8 @@
   <div
     class="artist-modal"
     *ngIf="activeArtist"
+    [class.mbreaks]="activeArtist.name === 'MBreaks'"
+    [class.pavane]="activeArtist.name === 'Pavane'"
     (click)="closeModal()"
   >
 

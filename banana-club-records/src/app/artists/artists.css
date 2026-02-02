@@ -348,15 +348,23 @@
 
 /* 🎯 Ajuste fino Pavane SOLO en modal y SOLO en móvil */
 @media (max-width: 768px) {
+
+  /* Ajuste base para todos */
   .artist-modal .carousel-track img {
     object-position: center 5%;
   }
 
-  /* Pavane (2º artista) baja un poco más */
-  .artist-modal .carousel-track img:nth-child(1) {
-    object-position: center 10%;
+  /* 🎧 MBreaks (3 fotos) */
+  .artist-modal.mbreaks .carousel-track img {
+    object-position: center 50%;
+  }
+
+  /* 🎹 Pavane (2 fotos) */
+  .artist-modal.pavane .carousel-track img {
+    object-position: center 8%;
   }
 }
+
 
 
 
