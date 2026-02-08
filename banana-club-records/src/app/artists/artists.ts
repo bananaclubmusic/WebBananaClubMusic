@@ -42,6 +42,23 @@ export class Artists {
       currentIndex: 0
     },
     {
+      name: 'Bowser',
+      images: [
+        'assets/images/bowser.JPG',
+        'assets/images/bowser2.JPG',
+        'assets/images/bowser3.JPG'
+      ],
+      description: 'Tras varios años de trayectoria en la producción musical, Bowser se ha consolidado ' +
+        'como uno de los nombres más reconocidos de la escena Breakbeat. Su pasión por los ritmos rotos ' +
+        'y la musicalidad lo ha llevado a alcanzar el Top 1 en ventas de Beatport en dos ocasiones, ' +
+        'así como a actuar en algunos de los festivales más destacados de España.'
+      ,
+      instagram: 'https://www.instagram.com/bowser.music/',
+      soundcloud: 'https://soundcloud.com/andreschusti?ref=clipboard&p=a&c=1',
+      beatport: 'https://www.beatport.com/es/artist/bowser/47029',
+      currentIndex: 0
+    },
+    {
       name: 'Pavane',
       images: [
         'assets/images/pavane.png',
@@ -57,7 +74,25 @@ export class Artists {
       soundcloud: 'https://soundcloud.com/pavanebreaks',
       beatport: 'https://www.beatport.com/es/artist/pavane/334115',
       currentIndex: 0
-    }
+    },
+    {
+      name: 'Rhades',
+      images: [
+        'assets/images/rhades.jpg',
+
+      ],
+      description: 'Rhades es un productor que fusiona melodías retro con basslines actuales, ' +
+        'construyendo un sonido propio y reconocible. Desde sus inicios en la producción musical, ' +
+        'se marcó objetivos claros que ha ido alcanzando progresivamente, publicando en algunos de los ' +
+        'sellos más destacados del panorama nacional y logrando posiciones Top a nivel mundial en ' +
+        'plataformas musicales. Su proyección y personalidad sonora lo sitúan como una de las promesas ' +
+        'más sólidas de la nueva generación.'
+      ,
+      instagram: 'https://www.instagram.com/rhades_official/',
+      soundcloud: 'https://soundcloud.com/rhades',
+      beatport: 'https://www.beatport.com/es/artist/rhades/767534',
+      currentIndex: 0
+    },
   ];
 
 
