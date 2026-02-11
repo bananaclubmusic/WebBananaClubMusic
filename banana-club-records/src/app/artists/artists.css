@@ -30,9 +30,10 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 36px;
 }
+
 
 /* CARD */
 .artist-card {
@@ -312,7 +313,15 @@
 
 
 /* RESPONSIVE */
+
+/* 👇 Tablet */
 @media (max-width: 900px) {
+
+  /* 🔥 COLUMNAS */
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .artist-modal-content {
     grid-template-columns: 1fr;
   }
@@ -322,12 +331,41 @@
   }
 }
 
+/* 👇 Móvil */
 @media (max-width: 600px) {
+
+  /* 🔥 COLUMNAS */
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Ajuste SOLO para la card de Bowser */
+  .artist-card:nth-child(1) .artist-media img {
+    object-position: center 40%;
+  }
+  .artist-card:nth-child(2) .artist-media img {
+    object-position: center 40%;
+  }
+  .artist-card:nth-child(3) .artist-media img {
+    object-position: center 40%;
+  }
+  .artist-card:nth-child(4) .artist-media img {
+    object-position: center 20%;
+  }
+  .artist-card:nth-child(5) .artist-media img {
+    object-position: center 40%;
+  }
+  .artist-card:nth-child(6) .artist-media img {
+    object-position: center 60%;
+  }
+  .artist-card:nth-child(7) .artist-media img {
+    object-position: center 10%;
+  }
+
   .mini-nav {
     display: none;
   }
-
 }
+
 @media (max-width: 600px) {
   .back-arrow {
     font-size: 2rem;
@@ -347,11 +385,9 @@
   .modal-text {
     padding: 2.5rem;
   }
-
-
 }
 
-/* 🎯 Ajuste fino Pavane SOLO en modal y SOLO en móvil */
+/* 🎯 Ajuste fino SOLO en modal y SOLO en móvil */
 @media (max-width: 768px) {
 
   /* Ajuste base para todos */
@@ -368,11 +404,22 @@
   .artist-modal.pavane .carousel-track img {
     object-position: center 8%;
   }
+
+  /* 🎮 Bowser – imagen 1 */
+  .artist-modal.bowser .carousel-track img:nth-child(1) {
+    object-position: center 35%;
+  }
+
+  /* 🎮 Bowser – imagen 2 */
+  .artist-modal.bowser .carousel-track img:nth-child(2) {
+    object-position: center 20%;
+  }
+
+  /* 🎮 Bowser – imagen 3 */
+  .artist-modal.bowser .carousel-track img:nth-child(3) {
+    object-position: center 50%;
+  }
 }
-
-
-
-
 
 @media (max-width: 480px) {
   .modal-text {

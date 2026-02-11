@@ -46,6 +46,13 @@
     *ngIf="activeArtist"
     [class.mbreaks]="activeArtist.name === 'MBreaks'"
     [class.pavane]="activeArtist.name === 'Pavane'"
+    [class.bowser]="activeArtist.name === 'Bowser'"
+    [class.rhades]="activeArtist.name === 'Rhades'"
+    [class.cooltasty]="activeArtist.name === 'CoolTasty'"
+    [class.sellrude]="activeArtist.name === 'SellRude'"
+    [class.cude]="activeArtist.name === 'Cude'"
+    [class.jottafrank]="activeArtist.name === 'JottaFrank'"
+    [class.buson]="activeArtist.name === 'Buson'"
     (click)="closeModal()"
   >
 
@@ -112,10 +119,7 @@
             target="_blank"
             aria-label="Instagram"
           >
-            <img
-              src="assets/images/instagram.png"
-              class="social-icon instagram"
-            >
+            <img src="assets/images/instagram.png" class="social-icon instagram">
           </a>
 
           <a
@@ -124,10 +128,7 @@
             target="_blank"
             aria-label="SoundCloud"
           >
-            <img
-              src="assets/images/soundcloud.png"
-              class="social-icon soundcloud"
-            >
+            <img src="assets/images/soundcloud.png" class="social-icon soundcloud">
           </a>
 
           <a
@@ -136,10 +137,7 @@
             target="_blank"
             aria-label="Beatport"
           >
-            <img
-              src="assets/images/beatport.svg"
-              class="social-icon beatport"
-            >
+            <img src="assets/images/beatport.svg" class="social-icon beatport">
           </a>
 
         </div>
