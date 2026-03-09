@@ -2,27 +2,25 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 
-
 @Component({
-  selector: 'app-about',
+  selector: 'app-vinilos',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './about.html',
-  styleUrl: './about.css'
+  templateUrl: './vinilos.html',
+  styleUrls: ['./vinilos.css']
 })
-export class About {
+export class Vinilos {
+
+  menuOpen = false;
 
   constructor(private location: Location) {}
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
   goBack() {
     this.location.back();
   }
 
-  menuOpen = false;
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
 }
-
-

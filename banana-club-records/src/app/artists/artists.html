@@ -1,22 +1,13 @@
-<section class="artists">
+<app-header></app-header>
 
-  <!-- BACK -->
-  <button class="back-arrow" routerLink="/" aria-label="Volver">
-    ←
-  </button>
-
-  <!-- MINI NAV -->
-  <nav class="mini-nav">
-    <a routerLink="/" routerLinkActive="active">Inicio</a>
-    <a routerLink="/people" routerLinkActive="active">Fundador</a>
-    <a routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
-  </nav>
+<main class="artists-main">
 
   <!-- GRID -->
   <div class="artists-grid">
 
     <article
       class="artist-card"
+      [ngClass]="artist.name.toLowerCase().replace(' ', '-')"
       *ngFor="let artist of artists"
     >
 
@@ -53,6 +44,7 @@
     [class.cude]="activeArtist.name === 'Cude'"
     [class.jottafrank]="activeArtist.name === 'JottaFrank'"
     [class.buson]="activeArtist.name === 'Buson'"
+    [class.runthebreaks]="activeArtist.name === 'Run The Breaks'"
     (click)="closeModal()"
   >
 
@@ -87,6 +79,7 @@
         </div>
 
         <button
+          *ngIf="activeArtist.images.length > 1"
           class="nav prev"
           (click)="prevImage(activeArtist)"
         >
@@ -94,6 +87,7 @@
         </button>
 
         <button
+          *ngIf="activeArtist.images.length > 1"
           class="nav next"
           (click)="nextImage(activeArtist)"
         >
@@ -148,4 +142,48 @@
 
   </div>
 
-</section>
+
+<footer class="footer">
+
+  <div class="footer-social">
+
+    <a href="https://www.instagram.com/banana_club_music/"
+       target="_blank"
+       rel="noopener"
+       class="social-link">
+
+      <img src="assets/images/instagram.png"
+           class="social-icon instagram"
+           alt="Instagram">
+
+    </a>
+
+    <a href="https://soundcloud.com/thebananaclub"
+       target="_blank"
+       rel="noopener"
+       class="social-link">
+
+      <img src="assets/images/soundcloud.png"
+           class="social-icon soundcloud"
+           alt="SoundCloud">
+
+    </a>
+
+    <a href="https://www.beatport.com/label/banana-club/87402"
+       target="_blank"
+       rel="noopener"
+       class="social-link">
+
+      <img src="assets/images/beatport.svg"
+           class="social-icon beatport"
+           alt="Beatport">
+
+    </a>
+
+  </div>
+
+  <p class="footer-text">
+    &copy; Banana Club Music. Todos los derechos reservados.
+  </p>
+
+</footer>

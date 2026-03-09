@@ -1,6 +1,41 @@
+<header class="navbar">
+  <div class="nav-container">
+
+    <div class="hamburger-nav">
+
+      <button class="hamburger"
+              (click)="toggleMenu()"
+              [class.active]="menuOpen"
+              aria-label="Toggle Navigation">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+      <nav class="hamburger-menu" [class.open]="menuOpen">
+        <a routerLink="/" (click)="toggleMenu()">Inicio</a>
+        <a routerLink="/people" (click)="toggleMenu()">Fundador</a>
+        <a routerLink="/artists" (click)="toggleMenu()">Artistas</a>
+        <a routerLink="/vinilos" (click)="toggleMenu()">Vinilos</a>
+      </nav>
+
+    </div>
+
+  </div>
+</header>
+
 <button class="back-arrow" (click)="goBack()" aria-label="Volver">
   ←
 </button>
+
+<nav class="mini-nav">
+  <a routerLink="/" routerLinkActive="active">Inicio</a>
+  <a routerLink="/people" routerLinkActive="active">Fundador</a>
+  <a routerLink="/artists" routerLinkActive="active">Artistas</a>
+  <a routerLink="/vinilos" routerLinkActive="active">Vinilos</a>
+</nav>
 
 <main class="about-layout">
 
@@ -13,13 +48,11 @@
       breakbeat y UK garage.
     </p>
 
-
     <p>
       Nacido de la pasión por los ritmos rotos y la cultura de club,
-      Banana Club existe para apoyar a artistas que rompen límites
+      Banana Club existe para apoyar a artistas nuevos y consagrados que rompen límites
       y mantienen la música electrónica viva.
     </p>
-
 
     <p>
       No nos interesan las modas.
@@ -33,9 +66,32 @@
       </a>.
     </p>
 
-
     <a routerLink="/" class="back-link">← Volver a inicio</a>
 
   </section>
 
 </main>
+
+<footer class="footer">
+
+  <div class="footer-social">
+
+    <a href="https://www.instagram.com/banana_club_music/" target="_blank" rel="noopener" class="social-link">
+      <img src="assets/images/instagram.png" class="social-icon instagram" alt="Instagram">
+    </a>
+
+    <a href="https://soundcloud.com/thebananaclub" target="_blank" rel="noopener" class="social-link">
+      <img src="assets/images/soundcloud.png" class="social-icon soundcloud" alt="SoundCloud">
+    </a>
+
+    <a href="https://www.beatport.com/label/banana-club/87402" target="_blank" rel="noopener" class="social-link">
+      <img src="assets/images/beatport.svg" class="social-icon beatport" alt="Beatport">
+    </a>
+
+  </div>
+
+  <p class="footer-text">
+    &copy; Banana Club Music. Todos los derechos reservados.
+  </p>
+
+</footer>

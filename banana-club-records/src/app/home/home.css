@@ -11,8 +11,7 @@
   width: 100%;
   padding: 1.5rem 0;
   z-index: 100;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
-  backdrop-filter: blur(4px);
+
 }
 
 .nav-container {
@@ -100,7 +99,9 @@
 }
 
 .home-title {
-  font-size: clamp(3rem, 12vw, 9rem);
+  font-family: 'Bulltoz02', 'Bulltoz03', 'BananaFont', Arial, Helvetica, sans-serif;
+  font-size: clamp(5.5rem, 8vw, 7.5rem);
+  letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -159,14 +160,27 @@
   width: 40px;
   height: 40px;
   object-fit: contain;
-  filter: grayscale(1) invert(1) brightness(0.8);
+
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+
+  transform: scale(var(--icon-scale, 1));
   transition: all 0.4s ease;
 }
 
+
 .social-link:hover img {
-  filter: grayscale(0) invert(0) brightness(1);
-  transform: scale(1.2) translateY(-4px);
+  transform: scale(calc(var(--icon-scale, 1) * 1.2)) translateY(-4px);
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(242,211,107,0.35));
+  opacity: 1;
 }
+
+
+/* Ajuste tamaño Instagram */
+.social-link img[alt="Instagram"] {
+  --icon-scale: 0.7;
+}
+
 
 /* Floating BG refined */
 .floating-bg {
@@ -175,23 +189,35 @@
   left: 0;
   width: 60vh;
   height: 60vh;
+
   background-image: url('../../assets/images/bananin.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
   opacity: 0.06;
   pointer-events: none;
   z-index: -1;
+
+  will-change: transform; /* mejora rendimiento de la animación */
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
+
 .footer {
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: center;
   border-top: 1px solid var(--glass-border);
 }
 
-.footer p {
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
   font-size: 0.75rem;
   color: var(--text-secondary);
   letter-spacing: 0.1em;
@@ -223,4 +249,29 @@
   .social-links { gap: 1.5rem; }
   .social-link img { width: 32px; height: 32px; }
   .demo-button { padding: 1rem 2.5rem; }
+}
+
+/* Tablet Breakpoints */
+@media (max-width: 1024px) {
+  .floating-bg {
+    width: 45vh;
+    height: 45vh;
+  }
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 1024px) {
+  .floating-bg {
+    width: 45vh;
+    height: 45vh;
+  }
+}
+
+/* Movil pequeño Breakpoints */
+@media (max-width: 480px) {
+  .floating-bg {
+    width: 26vh;
+    height: 26vh;
+    opacity: 0.04;
+  }
 }

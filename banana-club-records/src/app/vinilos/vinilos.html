@@ -1,0 +1,153 @@
+<header class="navbar">
+
+  <div class="nav-container">
+
+    <!-- HAMBURGER (mobile) -->
+    <div class="hamburger-nav">
+
+      <button class="hamburger"
+              (click)="toggleMenu()"
+              [class.active]="menuOpen"
+              aria-label="Toggle Navigation">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+      <nav class="hamburger-menu" [class.open]="menuOpen">
+        <a routerLink="/" (click)="toggleMenu()">Inicio</a>
+        <a routerLink="/people" (click)="toggleMenu()">Fundador</a>
+        <a routerLink="/artists" (click)="toggleMenu()">Artistas</a>
+        <a routerLink="/about" (click)="toggleMenu()">Sobre Nosotros</a>
+      </nav>
+
+    </div>
+
+    <!-- BACK ARROW -->
+    <button class="back-arrow" (click)="goBack()" aria-label="Volver">
+      ←
+    </button>
+
+    <!-- DESKTOP NAV -->
+    <nav class="mini-nav">
+      <a routerLink="/" routerLinkActive="active">Inicio</a>
+      <a routerLink="/people" routerLinkActive="active">Fundador</a>
+      <a routerLink="/artists" routerLinkActive="active">Artistas</a>
+      <a routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<div class="floating-bg"></div>
+
+
+<main class="vinyl-main">
+
+  <!-- HERO -->
+  <section class="vinyl-hero">
+
+    <div class="container vinyl-content">
+
+      <h1 class="vinyl-title">
+        CATALOGO DE VINILOS
+      </h1>
+
+      <p class="vinyl-text">
+        ¿Eres amante de lo digital pero también disfrutas del sonido del vinilo?
+        En Banana Club también contamos con un catálogo físico en constante crecimiento,
+        llevando nuestra música desde la pista de baile directamente a tu colección.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- VINYL GRID -->
+
+  <section class="vinyl-section">
+
+    <div class="vinyl-grid">
+
+      <!-- VINILO 1 -->
+      <a class="vinyl-card"
+         href="https://waxport.es/products/fm-3-funky-beats-12-mint-m?variant=52517256266075"
+         target="_blank">
+
+        <img src="assets/images/funky_beats.png" alt="Vinilo 1">
+
+      </a>
+
+      <!-- VINILO 2 -->
+      <a class="vinyl-card"
+         href="https://waxport.es/products/fm-3-black-coffee-12-mint-m?variant=52084485128539"
+         target="_blank">
+
+        <img src="assets/images/milkshake.png" alt="Vinilo 2">
+
+      </a>
+
+      <!-- VINILO 3 -->
+      <a class="vinyl-card"
+         href="https://waxport.es/products/various-milkshake-volume-1-12-mint-m?variant=52083775799643"
+         target="_blank">
+
+        <img src="assets/images/black_coffee.jpg" alt="Vinilo 3">
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+
+    <div class="footer-social">
+
+      <a href="https://www.instagram.com/banana_club_music/"
+         target="_blank"
+         rel="noopener"
+         class="social-link">
+
+        <img src="assets/images/instagram.png"
+             class="social-icon instagram"
+             alt="Instagram">
+
+      </a>
+
+      <a href="https://soundcloud.com/thebananaclub"
+         target="_blank"
+         rel="noopener"
+         class="social-link">
+
+        <img src="assets/images/soundcloud.png"
+             class="social-icon soundcloud"
+             alt="SoundCloud">
+
+      </a>
+
+      <a href="https://www.beatport.com/label/banana-club/87402"
+         target="_blank"
+         rel="noopener"
+         class="social-link">
+
+        <img src="assets/images/beatport.svg"
+             class="social-icon beatport"
+             alt="Beatport">
+
+      </a>
+
+    </div>
+
+    <p class="footer-text">
+      &copy; Banana Club Music. Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+
+</main>

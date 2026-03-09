@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { PeopleComponent } from './people/people';
 import {Artists} from './artists/artists';
+import {Vinilos} from './vinilos/vinilos';
 
 
 
@@ -20,6 +21,8 @@ export const routes: Routes = [
     component: PeopleComponent
   },
   { path: 'artists', component: Artists },
+
+  { path: 'vinilos', component: Vinilos },
   {
     path: '**',
     redirectTo: '',

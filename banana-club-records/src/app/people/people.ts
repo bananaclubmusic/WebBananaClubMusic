@@ -28,5 +28,11 @@ export class PeopleComponent {
   prev() {
     this.currentIndex = (this.currentIndex - 1 + this.totalImages) % this.totalImages;
   }
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
 

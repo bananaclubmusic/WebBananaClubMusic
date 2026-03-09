@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
+import {NgClass, NgFor, NgIf} from '@angular/common';
+import { Header } from '../components/header/header';
 
 interface Artist {
   name: string;
@@ -15,7 +16,7 @@ interface Artist {
 @Component({
   selector: 'app-artists',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf],
+  imports: [RouterLink, NgFor, NgIf, NgClass, Header],
   templateUrl: './artists.html',
   styleUrls: ['./artists.css']
 })
@@ -27,8 +28,6 @@ export class Artists {
     {
       name: 'Bowser',
       images: [
-        'assets/images/bowser.JPG',
-        'assets/images/bowser2.JPG',
         'assets/images/bowser3.JPG'
       ],
       description: 'Tras varios años de trayectoria en la producción musical, Bowser se ha consolidado ' +
@@ -44,7 +43,6 @@ export class Artists {
       name: 'Buson',
       images: [
         'assets/images/buson.jpg',
-        'assets/images/buson2.png'
       ],
       description: 'Buson es un DJ y productor de breakbeat de 25 años que destaca por su sonido enérgico, ' +
         'con bajos potentes y ritmos intensos diseñados para la pista de baile.' +
@@ -59,7 +57,6 @@ export class Artists {
       name: 'CoolTasty',
       images: [
         'assets/images/cooltasty2.png',
-        'assets/images/cooltasty.png'
       ],
       description: 'CoolTasty es un DJ y productor con más de una década de experiencia dentro ' +
         'de la escena electrónica. A lo largo de su trayectoria ha recorrido Andalucía actuando en ' +
@@ -74,8 +71,8 @@ export class Artists {
     {
       name: 'Cude',
       images: [
-        'assets/images/cude.jpg',
-        'assets/images/cude1.jpg'
+        'assets/images/cude3.jpeg',
+
       ],
       description: 'Julio López Cuder, conocido artísticamente como Cude, es un DJ y productor con ' +
         'más de una década de experiencia en la industria musical. En 2024 dio un paso clave en su ' +
@@ -91,9 +88,10 @@ export class Artists {
       name: 'JottaFrank',
       images: [
         'assets/images/jottafrank.jpg',
-        'assets/images/jottafrank2.jpg'
       ],
-      description: '-',
+      description: 'JottaFrank es un DJ y productor cordobés, referente de la escena electrónica underground andaluza. ' +
+        'Reconocido por su gran energía en pista, su sonido fusiona el breakbeat con la electrónica clásica y actual, ' +
+        'aportando una visión moderna, directa y orientada al club. ',
       instagram: 'https://www.instagram.com/jottafrankdj/',
       soundcloud: 'https://soundcloud.com/jottafrank',
       beatport: 'https://www.beatport.com/es/artist/jottafrank/739636',
@@ -103,8 +101,6 @@ export class Artists {
       name: 'MBreaks',
       images: [
         'assets/images/mbreaks.JPG',
-        'assets/images/mbreaks2.JPG',
-        'assets/images/mbreaks3.JPG'
       ],
       description: 'Carmen, también conocida como MBreaks, es una estrella en ' +
         'constante ascenso en la escena del Breakbeat y UKG en España. ' +
@@ -119,7 +115,6 @@ export class Artists {
       name: 'Pavane',
       images: [
         'assets/images/pavane.png',
-        'assets/images/pavane2.png'
       ],
       description: 'Pavane es un joven productor musical y DJ que inició su trayectoria en 2018, ' +
         'consolidándose progresivamente dentro de la escena electrónica. Su sonido se mueve entre ' +
@@ -138,7 +133,7 @@ export class Artists {
       images: [
         'assets/images/rhades.jpg'
       ],
-      description: 'RHADES es un productor que fusiona melodías retro con basslines actuales, ' +
+      description: 'Rhades es un productor que fusiona melodías retro con basslines actuales, ' +
         'construyendo un sonido propio y reconocible. Desde sus inicios en la producción musical, ' +
         'se marcó objetivos claros que ha ido alcanzando progresivamente, publicando en algunos de los ' +
         'sellos más destacados del panorama nacional y logrando posiciones Top a nivel mundial en ' +
@@ -150,10 +145,38 @@ export class Artists {
       currentIndex: 0
     },
     {
+      name: 'Run The Breaks',
+      images: [
+        'assets/images/runthebreaks.jpg',
+      ],
+      description: 'Run The Breaks es el alter ego más canalla de FM-3 y CoolTasty, ' +
+        'un proyecto impredecible donde todo puede suceder en cabina. Sus sesiones combinan ' +
+        'remixes exclusivos, mezclas rápidas y una visión sin límites del breakbeat en todas ' +
+        'sus vertientes, ofreciendo sets intensos y cargados de energía.',
+      instagram: 'https://www.instagram.com/runthebreaksofficial/',
+      soundcloud: 'https://soundcloud.com/runthebreaksofficial',
+      beatport: 'https://www.beatport.com/es/artist/run-the-breaks/700277',
+      currentIndex: 0
+    },
+    {
+      name: 'Sans',
+      images: [
+        'assets/images/sans.jpeg',
+      ],
+      description: 'Productor emergente que viene consolidándose con fuerza dentro de la escena, ' +
+        'publicando música en algunos de los sellos más destacados del panorama nacional. ' +
+        'Inició su trayectoria en 2018, influenciado por el sonido retro y el UK Garage, ' +
+        'desarrollando una identidad fresca y enérgica. Sus sesiones destacan por su dinamismo ' +
+        'y variedad musical, creando una experiencia intensa que mantiene al público en constante movimiento.',
+      instagram: 'https://www.instagram.com/sans.breaks/',
+      soundcloud: 'https://soundcloud.com/sansbreak',
+      beatport: 'https://www.beatport.com/es/artist/sans/254398',
+      currentIndex: 0
+    },
+    {
       name: 'SellRude',
       images: [
         'assets/images/sellrude.jpg',
-        'assets/images/sellrude2.jpg'
       ],
       description: 'SellRude es un DJ y productor con más de 11 años de trayectoria en la escena ' +
         'Breaks, destacando desde muy joven por su talento y proyección internacional. Con solo 18 años ' +
@@ -188,5 +211,11 @@ export class Artists {
 
   closeModal() {
     this.activeArtist = null;
+  }
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }

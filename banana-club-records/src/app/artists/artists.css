@@ -17,6 +17,28 @@
   z-index: 0;
 }
 
+
+/* ===== FOOTER ===== */
+
+.footer {
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
 /* WRAPPER */
 .artists {
   width: 100%;
@@ -81,7 +103,18 @@
 
 /* Pavane */
 .artist-card:nth-child(3) img {
-  object-position: center 15%;
+  object-position: center 40%;
+}
+
+.artist-card:nth-child(4) img {
+  object-position: center 30%;
+}
+
+.artist-card:nth-child(6) img {
+  object-position: center 75%;
+}
+.artist-card:nth-child(7) img {
+  object-position: center 10%;
 }
 
 
@@ -98,74 +131,6 @@
   color: rgba(242, 211, 107, 0.95);
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-}
-
-/* BACK + MINI NAV (igual que Founder) */
-.back-arrow {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  background: none;
-  border: none;
-  color: rgba(242, 211, 107, 0.9);
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.back-arrow:hover {
-  opacity: 1;
-  transform: translateX(-4px);
-}
-
-.mini-nav {
-  position: absolute;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.mini-nav a {
-  color: #f2f2f2;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-.mini-nav a:hover {
-  color: rgba(242, 211, 107, 0.9);
-  opacity: 1;
-}
-
-.mini-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(242, 211, 107, 0.8);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.mini-nav a:hover::after,
-.mini-nav a.active::after {
-  transform: scaleX(1);
-}
-
-.mini-nav a.active {
-  color: rgba(242, 211, 107, 1);
-  opacity: 1;
 }
 
 /* ===== MODAL ===== */
@@ -201,12 +166,17 @@
   right: 20px;
   background: none;
   border: none;
-  font-size: 2rem;
-  color: rgba(242, 211, 107, 0.9);
+  font-size: 2.2rem;
+  color: rgba(242, 211, 107, 0.95);
   cursor: pointer;
   z-index: 10;
-}
 
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 0 10px rgba(0,0,0,0.5);
+
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
 /* MODAL CARRUSEL */
 .modal-media {
   position: relative;
@@ -286,6 +256,12 @@
   line-height: 1.7;
 }
 
+.artists-main {
+  padding-top: 140px;
+  position: relative;
+  z-index: 1;
+}
+
 /* SOCIALS */
 .artist-socials {
   margin-top: 2rem;
@@ -297,12 +273,37 @@
 .social-icon {
   width: 44px;
   height: 44px;
+  object-fit: contain;
   opacity: 0.75;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 0 0 rgba(242, 211, 107, 0));
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
 }
 
-.social-icon.instagram { transform: scale(0.7); }
-.social-icon:hover { opacity: 1; transform: scale(1.4); }
+/* Escala base Instagram */
+.social-icon.instagram {
+  transform: scale(0.7);
+}
+
+/* Hover Beatport / Soundcloud */
+.social-icon:hover.beatport,
+.social-icon:hover.soundcloud {
+  transform: scale(1.6);
+  opacity: 1;
+}
+
+/* Hover Instagram (más pequeño) */
+.social-icon:hover.instagram {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Glow Banana */
+.social-icon:hover {
+  filter: drop-shadow(0 0 3px rgba(242, 211, 107, 0.18));
+}
 
 .modal-media img {
   width: 100%;
@@ -314,10 +315,10 @@
 
 /* RESPONSIVE */
 
-/* 👇 Tablet */
+/*  Tablet */
 @media (max-width: 900px) {
 
-  /* 🔥 COLUMNAS */
+  /*  COLUMNAS */
   .artists-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -331,16 +332,16 @@
   }
 }
 
-/* 👇 Móvil */
+/*  Móvil */
 @media (max-width: 600px) {
 
-  /* 🔥 COLUMNAS */
+  /*  COLUMNAS */
   .artists-grid {
     grid-template-columns: 1fr;
   }
   /* Ajuste SOLO para la card de Bowser */
   .artist-card:nth-child(1) .artist-media img {
-    object-position: center 40%;
+    object-position: center 55%;
   }
   .artist-card:nth-child(2) .artist-media img {
     object-position: center 40%;
@@ -349,28 +350,23 @@
     object-position: center 40%;
   }
   .artist-card:nth-child(4) .artist-media img {
-    object-position: center 20%;
+    object-position: center 25%;
   }
   .artist-card:nth-child(5) .artist-media img {
     object-position: center 40%;
   }
   .artist-card:nth-child(6) .artist-media img {
-    object-position: center 60%;
+    object-position: center 65%;
   }
   .artist-card:nth-child(7) .artist-media img {
     object-position: center 10%;
   }
-
-  .mini-nav {
-    display: none;
+  .artist-card:nth-child(9) .artist-media img {
+    object-position: center 90%;
   }
+
 }
 
-@media (max-width: 600px) {
-  .back-arrow {
-    font-size: 2rem;
-  }
-}
 
 @media (max-width: 768px) {
 
@@ -405,34 +401,37 @@
     object-position: center 8%;
   }
 
-  /* 🎮 Bowser – imagen 1 */
+  /* Bowser – imagen 1 */
   .artist-modal.bowser .carousel-track img:nth-child(1) {
-    object-position: center 35%;
+    object-position: center 55%;
   }
 
-  /* 🎮 Bowser – imagen 2 */
-  .artist-modal.bowser .carousel-track img:nth-child(2) {
+  .artist-modal.buson .carousel-track img:nth-child(1) {
+    object-position: center 40%;
+  }
+
+  .artist-modal.cooltasty .carousel-track img:nth-child(1) {
+    object-position: center 30%;
+  }
+  .artist-modal.cude .carousel-track img:nth-child(1) {
     object-position: center 20%;
   }
-
-  /* 🎮 Bowser – imagen 3 */
-  .artist-modal.bowser .carousel-track img:nth-child(3) {
-    object-position: center 50%;
+  .artist-modal.jottafrank .carousel-track img:nth-child(1) {
+    object-position: center 30%;
   }
+  .artist-modal.mbreaks .carousel-track img:nth-child(1) {
+    object-position: center 60%;
+  }
+  .artist-modal.runthebreaks .carousel-track img:nth-child(1) {
+    object-position: center 70%;
+  }
+  .artist-modal.sellrude .carousel-track img:nth-child(1) {
+    object-position: center 45%;
+  }
+
+
 }
 
-@media (max-width: 480px) {
-  .modal-text {
-    padding: 1.6rem;
-  }
 
-  .modal-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .modal-text p {
-    font-size: 0.9rem;
-  }
-}
 
 

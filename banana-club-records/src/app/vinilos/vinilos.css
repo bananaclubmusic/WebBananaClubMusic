@@ -1,0 +1,428 @@
+:host {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+
+  /* MISMO FONDO QUE ARTISTAS */
+  background-image: url('../../assets/images/fondo-about.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+:host::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 13, 13, 0.8);
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima */
+.vinyl-main,
+.vinyl-hero,
+.vinyl-section,
+.social-section {
+  position: relative;
+  z-index: 1;
+}
+
+
+.vinyl-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vinyl-main {
+  padding-top: 140px;
+}
+.vinyl-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.vinyl-card img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60vh;
+  height: 60vh;
+
+  background-image: url('../../assets/images/bananin.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== VINYL HERO ===== */
+
+.vinyl-hero {
+  text-align: center;
+}
+
+.vinyl-title {
+  font-family: 'Bulltoz02', 'Bulltoz03', 'BananaFont', Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.1em; /* un poco menos, más elegante */
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  filter: drop-shadow(0 0 30px var(--accent-yellow-glow));
+}
+
+.vinyl-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+/* ===== VINYL GRID ===== */
+
+.vinyl-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+
+/* CARD */
+
+.vinyl-card {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* IMAGE */
+
+
+
+/* HOVER */
+
+.vinyl-card:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%) contrast(1);
+}
+
+.vinyl-card:hover {
+  box-shadow: 0 0 40px rgba(242,211,107,0.25);
+  transform: translateY(-6px);
+}
+
+
+
+/* MINI NAV */
+.mini-nav {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.mini-nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* HOVER BANANA 🍌 */
+.mini-nav a:hover {
+  color: rgba(242, 211, 107, 0.9);
+  opacity: 1;
+}
+
+/* SUBRAYADO SUAVE */
+.mini-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(242, 211, 107, 0.8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.mini-nav a:hover::after,
+.mini-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.mini-nav a.active {
+  color: rgba(242, 211, 107, 1);
+  opacity: 1;
+}
+
+
+
+/* ===== FOOTER ===== */
+
+.footer {
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
+
+/* BACK ARROW */
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: none;
+  border: none;
+  color: rgba(242, 211, 107, 0.9);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+@media (max-width: 600px) {
+  .mini-nav {
+    display: none;
+  }
+
+}
+
+
+/* ===== SOCIAL MEDIA (igual que HOME) ===== */
+.social-section {
+  padding-bottom: 4rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  animation: fadeIn 1s ease-out 2s forwards;
+
+}
+
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+
+  transform: scale(var(--icon-scale, 1));
+  transition: all 0.4s ease;
+}
+
+.social-link:hover img {
+  transform: scale(calc(var(--icon-scale, 1) * 1.2)) translateY(-4px);
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(242,211,107,0.35));
+  opacity: 1;
+}
+
+/* ajuste tamaño instagram */
+.instagram {
+  --icon-scale: 0.7;
+}
+
+/* responsive igual que home */
+
+@media (max-width: 768px) {
+
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-link img {
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
+
+
+
+
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.75); /* ← fondo semitransparente */
+  backdrop-filter: blur(10px);        /* ← efecto glass */
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+
+.hamburger-nav {
+  display: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+
+/* HAMBURGER BUTTON */
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--accent-yellow);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+
+/* ANIMACIÓN X */
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* MENU */
+
+.hamburger-menu {
+  position: absolute;
+  top: 100%;
+  left: 2rem;
+
+  background: var(--bg-card);
+  backdrop-filter: blur(15px);
+
+  padding: 2rem;
+
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+
+  box-shadow: var(--glass-shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+
+/* LINKS */
+
+.hamburger-menu a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hamburger-menu a:hover {
+  color: var(--accent-yellow);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .hamburger-nav {
+    display: block;
+  }
+
+  .mini-nav {
+    display: none;
+  }
+
+  .back-arrow {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
