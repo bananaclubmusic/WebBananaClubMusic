@@ -90,7 +90,7 @@
   letter-spacing: 0.1em; /* un poco menos, más elegante */
   margin-bottom: 40px;
   color: var(--text-primary);
-  filter: drop-shadow(0 0 30px var(--accent-yellow-glow));
+  filter: drop-shadow(0 0 2px var(--accent-yellow-glow));
 }
 
 .vinyl-text {
