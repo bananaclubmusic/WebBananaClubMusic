@@ -311,10 +311,27 @@
   object-fit: cover;
 }
 
+.artist-card:active {
+  transform: scale(0.97);
+}
+
 /* Desktop hover */
-.artist-card:hover img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.03);
+@media (hover: hover) {
+
+  .artist-card:hover img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.03);
+  }
+
+}
+
+@media (hover: none) {
+
+  .artist-card:active img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.03);
+  }
+
 }
 
 /* Mobile / tablet press */
