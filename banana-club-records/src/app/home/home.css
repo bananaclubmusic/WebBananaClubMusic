@@ -91,7 +91,7 @@
 
 /* Hero Section */
 .hero {
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,6 +202,19 @@
   will-change: transform; /* mejora rendimiento de la animación */
 }
 
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cta-wrapper {
+  margin-top: clamp(8rem, 6vw, 4rem);
+}
+
 /* ===== FOOTER ===== */
 
 .footer {
@@ -222,6 +235,8 @@
   color: var(--text-secondary);
   letter-spacing: 0.1em;
 }
+
+
 
 /* Animations */
 @keyframes titleReveal {
@@ -274,4 +289,13 @@
     height: 26vh;
     opacity: 0.04;
   }
+}
+
+@media (max-width: 480px) {
+
+  .home-title {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.9;
+  }
+
 }

@@ -96,6 +96,18 @@
   letter-spacing: 0.05em;
 }
 
+.waxport-link {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-weight: 350;
+  transition: opacity 0.3s ease;
+}
+
+.waxport-link:hover {
+  opacity: 0.75;
+}
+
+
 /* ===== VINYL GRID ===== */
 
 .vinyl-section {
@@ -114,11 +126,7 @@
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* IMAGE */
 
-
-
-/* HOVER */
 
 .vinyl-card:hover img {
   transform: scale(1.08);
@@ -129,61 +137,6 @@
   box-shadow: 0 0 40px rgba(242,211,107,0.25);
   transform: translateY(-6px);
 }
-
-
-
-/* MINI NAV */
-.mini-nav {
-  position: absolute;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.mini-nav a {
-  color: #f2f2f2;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-/* HOVER BANANA 🍌 */
-.mini-nav a:hover {
-  color: rgba(242, 211, 107, 0.9);
-  opacity: 1;
-}
-
-/* SUBRAYADO SUAVE */
-.mini-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(242, 211, 107, 0.8);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.mini-nav a:hover::after,
-.mini-nav a.active::after {
-  transform: scaleX(1);
-}
-
-.mini-nav a.active {
-  color: rgba(242, 211, 107, 1);
-  opacity: 1;
-}
-
-
 
 /* ===== FOOTER ===== */
 
@@ -205,34 +158,6 @@
   color: var(--text-secondary);
   letter-spacing: 0.1em;
 }
-
-
-/* BACK ARROW */
-.back-arrow {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  background: none;
-  border: none;
-  color: rgba(242, 211, 107, 0.9);
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.back-arrow:hover {
-  opacity: 1;
-  transform: translateX(-4px);
-}
-
-@media (max-width: 600px) {
-  .mini-nav {
-    display: none;
-  }
-
-}
-
 
 /* ===== SOCIAL MEDIA (igual que HOME) ===== */
 .social-section {
@@ -291,135 +216,9 @@
 
 
 
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 0;
-  z-index: 100;
-  background: rgba(13, 13, 13, 0.75); /* ← fondo semitransparente */
-  backdrop-filter: blur(10px);        /* ← efecto glass */
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
 
 
-.hamburger-nav {
-  display: none;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-}
 
-
-/* HAMBURGER BUTTON */
-
-.hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 10px;
-  z-index: 101;
-}
-
-.hamburger span {
-  width: 24px;
-  height: 2px;
-  background-color: var(--accent-yellow);
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-
-/* ANIMACIÓN X */
-
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-
-/* MENU */
-
-.hamburger-menu {
-  position: absolute;
-  top: 100%;
-  left: 2rem;
-
-  background: var(--bg-card);
-  backdrop-filter: blur(15px);
-
-  padding: 2rem;
-
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-
-  box-shadow: var(--glass-shadow);
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hamburger-menu.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(10px);
-}
-
-
-/* LINKS */
-
-.hamburger-menu a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.hamburger-menu a:hover {
-  color: var(--accent-yellow);
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-  .hamburger-nav {
-    display: block;
-  }
-
-  .mini-nav {
-    display: none;
-  }
-
-  .back-arrow {
-    display: none;
-  }
-
-}
 
 
 

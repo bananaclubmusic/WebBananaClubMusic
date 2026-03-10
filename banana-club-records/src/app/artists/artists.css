@@ -52,7 +52,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
 }
 
@@ -311,6 +311,17 @@
   object-fit: cover;
 }
 
+/* Desktop hover */
+.artist-card:hover img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.03);
+}
+
+/* Mobile / tablet press */
+.artist-card:active img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.03);
+}
 
 
 /* RESPONSIVE */
@@ -341,22 +352,22 @@
   }
   /* Ajuste SOLO para la card de Bowser */
   .artist-card:nth-child(1) .artist-media img {
-    object-position: center 55%;
+    object-position: center 100%;
   }
   .artist-card:nth-child(2) .artist-media img {
-    object-position: center 40%;
+    object-position: center 90%;
   }
   .artist-card:nth-child(3) .artist-media img {
     object-position: center 40%;
   }
   .artist-card:nth-child(4) .artist-media img {
-    object-position: center 25%;
+    object-position: center 100%;
   }
   .artist-card:nth-child(5) .artist-media img {
-    object-position: center 40%;
+    object-position: center 100%;
   }
   .artist-card:nth-child(6) .artist-media img {
-    object-position: center 65%;
+    object-position: center 100%;
   }
   .artist-card:nth-child(7) .artist-media img {
     object-position: center 10%;
@@ -367,6 +378,28 @@
 
 }
 
+@media (max-width: 600px) {
+
+  .artist-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .artist-media {
+    aspect-ratio: 3 / 4;
+  }
+
+  .artist-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
 
 @media (max-width: 768px) {
 
@@ -432,6 +465,13 @@
 
 }
 
+@media (max-width: 768px) {
 
+  .artist-modal {
+    padding-top: 90px;
+    align-items: flex-start;
+  }
+
+}
 
 

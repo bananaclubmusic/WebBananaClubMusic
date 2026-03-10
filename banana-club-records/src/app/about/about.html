@@ -1,41 +1,4 @@
-<header class="navbar">
-  <div class="nav-container">
-
-    <div class="hamburger-nav">
-
-      <button class="hamburger"
-              (click)="toggleMenu()"
-              [class.active]="menuOpen"
-              aria-label="Toggle Navigation">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-      <nav class="hamburger-menu" [class.open]="menuOpen">
-        <a routerLink="/" (click)="toggleMenu()">Inicio</a>
-        <a routerLink="/people" (click)="toggleMenu()">Fundador</a>
-        <a routerLink="/artists" (click)="toggleMenu()">Artistas</a>
-        <a routerLink="/vinilos" (click)="toggleMenu()">Vinilos</a>
-      </nav>
-
-    </div>
-
-  </div>
-</header>
-
-<button class="back-arrow" (click)="goBack()" aria-label="Volver">
-  ←
-</button>
-
-<nav class="mini-nav">
-  <a routerLink="/" routerLinkActive="active">Inicio</a>
-  <a routerLink="/people" routerLinkActive="active">Fundador</a>
-  <a routerLink="/artists" routerLinkActive="active">Artistas</a>
-  <a routerLink="/vinilos" routerLinkActive="active">Vinilos</a>
-</nav>
+<app-header></app-header>
 
 <main class="about-layout">
 
