@@ -49,6 +49,8 @@
 .about-content {
   max-width: 640px;
   text-align: left;
+  margin: 0 auto;
+
 }
 
 /* TÍTULO */
@@ -67,6 +69,8 @@
   color: #cfcfcf;
   margin-bottom: 32px;
   max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
