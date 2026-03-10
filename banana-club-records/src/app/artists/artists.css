@@ -18,26 +18,7 @@
 }
 
 
-/* ===== FOOTER ===== */
 
-.footer {
-  padding: 3rem 0 2rem 0;
-  text-align: center;
-  border-top: 1px solid var(--glass-border);
-}
-
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer-text {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.1em;
-}
 
 /* WRAPPER */
 .artists {
@@ -50,7 +31,7 @@
 /* GRID */
 .artists-grid {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto; /* ← esto añade espacio abajo */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
@@ -86,10 +67,69 @@
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.artist-card:hover img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.03);
+
+
+
+/* Scroll reveal SOLO en móviles / tablets */
+@media (hover: none) {
+
+  @supports (animation-timeline: view()) {
+
+    .artist-card {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: artistFade linear forwards;
+      animation-timeline: view();
+      animation-range: entry 15% cover 40%;
+    }
+
+    .artist-card img {
+      animation: artistColor linear forwards;
+      animation-timeline: view();
+      animation-range: entry 20% cover 45%;
+    }
+
+  }
+
 }
+
+
+/* Card aparece */
+@keyframes artistFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Imagen pasa a color */
+@keyframes artistColor {
+  from {
+    filter: grayscale(100%) contrast(1.1);
+    transform: scale(1);
+  }
+  to {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.03);
+  }
+}
+
+/* Stagger animation delay */
+
+.artist-card:nth-child(1) { animation-delay: 0s; }
+.artist-card:nth-child(2) { animation-delay: 0.08s; }
+.artist-card:nth-child(3) { animation-delay: 0.16s; }
+.artist-card:nth-child(4) { animation-delay: 0.24s; }
+.artist-card:nth-child(5) { animation-delay: 0.32s; }
+.artist-card:nth-child(6) { animation-delay: 0.40s; }
+.artist-card:nth-child(7) { animation-delay: 0.48s; }
+.artist-card:nth-child(8) { animation-delay: 0.56s; }
+.artist-card:nth-child(9) { animation-delay: 0.64s; }
+.artist-card:nth-child(10) { animation-delay: 0.72s; }
 
 /* MBreaks */
 .artist-card:nth-child(1) img {
@@ -334,11 +374,6 @@
 
 }
 
-/* Mobile / tablet press */
-.artist-card:active img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.03);
-}
 
 
 /* RESPONSIVE */

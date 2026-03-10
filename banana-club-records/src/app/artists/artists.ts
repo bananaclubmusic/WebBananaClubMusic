@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {NgClass, NgFor, NgIf} from '@angular/common';
 import { Header } from '../components/header/header';
+import {Footer} from '../components/footer/footer';
 
 interface Artist {
   name: string;
@@ -16,7 +17,7 @@ interface Artist {
 @Component({
   selector: 'app-artists',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf, NgClass, Header],
+  imports: [RouterLink, NgFor, NgIf, NgClass, Header, Footer],
   templateUrl: './artists.html',
   styleUrls: ['./artists.css']
 })

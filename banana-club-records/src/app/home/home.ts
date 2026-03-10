@@ -1,11 +1,12 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import {Footer} from '../components/footer/footer';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, Footer],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
