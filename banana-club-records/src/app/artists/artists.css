@@ -31,7 +31,7 @@
 /* GRID */
 .artists-grid {
   max-width: 1200px;
-  margin: 0 auto 100px auto; /* ← esto añade espacio abajo */
+  margin: 40px auto 100px auto; /* ← esto añade espacio abajo */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
@@ -66,6 +66,11 @@
   filter: grayscale(100%) contrast(1.1);
   transition: filter 0.4s ease, transform 0.4s ease;
 }
+
+.artists-title {
+  text-align: center;
+}
+
 
 
 
@@ -130,6 +135,10 @@
 .artist-card:nth-child(8) { animation-delay: 0.56s; }
 .artist-card:nth-child(9) { animation-delay: 0.64s; }
 .artist-card:nth-child(10) { animation-delay: 0.72s; }
+.artist-card:nth-child(11) { animation-delay: 0.80s; }
+.artist-card:nth-child(12) { animation-delay: 0.88s; }
+.artist-card:nth-child(13) { animation-delay: 0.96s; }
+.artist-card:nth-child(14) { animation-delay: 1.04s; }
 
 /* MBreaks */
 .artist-card:nth-child(1) img {
@@ -151,9 +160,16 @@
 }
 
 .artist-card:nth-child(6) img {
-  object-position: center 75%;
+  object-position: center 38%;
 }
 .artist-card:nth-child(7) img {
+  object-position: center 45%;
+}
+.artist-card:nth-child(8) img {
+  object-position: center 75%;
+}
+
+.artist-card:nth-child(9) img {
   object-position: center 10%;
 }
 
@@ -297,7 +313,11 @@
 }
 
 .artists-main {
-  padding-top: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
   position: relative;
   z-index: 1;
 }
@@ -402,7 +422,7 @@
   .artists-grid {
     grid-template-columns: 1fr;
   }
-  /* Ajuste SOLO para la card de Bowser */
+
   .artist-card:nth-child(1) .artist-media img {
     object-position: center 100%;
   }
@@ -495,6 +515,13 @@
     object-position: center 40%;
   }
 
+  .artist-modal.fm3 .carousel-track img:nth-child(1) {
+    object-position: center 40%;
+  }
+  .artist-modal.guau .carousel-track img:nth-child(1) {
+    object-position: center 30%;
+  }
+
   .artist-modal.cooltasty .carousel-track img:nth-child(1) {
     object-position: center 30%;
   }
@@ -527,3 +554,68 @@
 }
 
 
+@media (max-width: 768px) {
+  .artist-media img {
+    filter: grayscale(0%) contrast(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* INTRO ARTISTAS */
+
+.artists-intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.artists-content {
+  max-width: 640px;
+  text-align: left;
+}
+
+.artists-title {
+  font-family: 'Bulltoz02','Bulltoz03','BananaFont', Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.artists-content p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #cfcfcf;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.brand {
+  color: #f2d36b;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+
+/* móvil */
+@media (max-width: 768px) {
+
+  .artists-content {
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  .artists-content p {
+    margin: 0 auto 32px auto;
+  }
+
+}

@@ -37,7 +37,13 @@
 }
 
 .vinyl-main {
-  padding-top: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
 }
 .vinyl-grid {
   display: flex;
@@ -88,20 +94,22 @@
 }
 
 .vinyl-text {
-  max-width: 700px;
-  margin: 0 auto;
   font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  letter-spacing: 0.05em;
+  line-height: 1.9;
+  color: #cfcfcf;
+  margin: 0 auto 32px auto;   /* centra el bloque */
+  max-width: 520px;
+  text-align: center;         /* centra el texto */
 }
 
 .waxport-link {
-  color: var(--accent-yellow);
+  color: #f2d36b;
   text-decoration: none;
-  font-weight: 350;
+  font-weight: 500;
   transition: opacity 0.3s ease;
 }
+
+
 
 .waxport-link:hover {
   opacity: 0.75;
@@ -192,9 +200,32 @@
 
 }
 
+@media (max-width: 768px) {
+  .vinyl-card img {
+    filter: grayscale(0%) contrast(1);
+  }
+}
 
 
+.brand {
+  color: #f2d36b;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
 
+
+@media (max-width: 768px) {
+
+  .vinyl-content {
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  .vinyl-text {
+    margin: 0 auto 32px auto;
+  }
+
+}
 
 
 

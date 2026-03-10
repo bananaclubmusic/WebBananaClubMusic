@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PeopleComponent } from './people/people';
+import { PeopleComponent } from './founder/founder';
 import {Artists} from './artists/artists';
 import {Vinilos} from './vinilos/vinilos';
 
@@ -17,7 +17,7 @@ export const routes: Routes = [
       import('./about/about').then(m => m.About),
   },
   {
-    path: 'people',
+    path: 'founder',
     component: PeopleComponent
   },
   { path: 'artists', component: Artists },

@@ -86,6 +86,32 @@ export class Artists {
       currentIndex: 0
     },
     {
+      name: 'FM-3',
+      images: [
+        'assets/images/fm_3.jpg',
+      ],
+      description: 'FM-3, creador del sello Banana Club, es sinónimo de energía en la escena breakbeat. ' +
+        'Con un recorrido que lo ha llevado de los clubs andaluces hasta escenarios en Estados Unidos y Reino Unido, ' +
+        'se ha consolidado como uno de los DJs más potentes y versátiles del género.',
+      instagram: 'https://www.instagram.com/fmguion3/',
+      soundcloud: 'https://soundcloud.com/franmarchantres',
+      beatport: 'https://www.beatport.com/es/artist/fm-3/402033',
+      currentIndex: 0
+    },
+    {
+      name: 'Guau',
+      images: [
+        'assets/images/guau.jpg',
+      ],
+      description: 'Raul AKA Guau es la persona detrás de la imagen de Banana Club.' +
+        'Es también el diseñador de sellos como 83, Close Your Eyes, Etiqueta Negra y colaborador principal ' +
+        'en proyectos como Waxport y Elektroshok Records',
+      instagram: 'https://www.instagram.com/guau83_/',
+      soundcloud: 'https://soundcloud.com/guau',
+      beatport: 'https://www.beatport.com/es/artist/guau/117449',
+      currentIndex: 0
+    },
+    {
       name: 'JottaFrank',
       images: [
         'assets/images/jottafrank.jpg',
