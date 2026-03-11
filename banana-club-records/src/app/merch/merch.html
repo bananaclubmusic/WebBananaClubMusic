@@ -1,0 +1,139 @@
+<app-header></app-header>
+
+<div class="floating-bg"></div>
+
+<main class="merch-main">
+
+  <section class="merch-hero">
+
+    <div class="container merch-content">
+
+      <h1 class="merch-title">
+        MERCHANDISING
+      </h1>
+
+      <p class="merch-text">
+        Si quieres convertirte en un verdadero <span class="brand">Bananerx</span> y apoyar a tus artistas favoritos,
+        puedes hacerlo adquiriendo alguno de nuestros artículos oficiales.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="merch-section">
+
+    <div class="merch-grid">
+
+      <!-- ITEM 1 -->
+      <a class="merch-card" href="https://deejayskin.com/product/camiseta-fm-3-banana-club/" target="_blank">
+
+        <div class="merch-carousel">
+
+          <img
+            class="merch-front"
+            src="assets/images/camiseta1.jpg"
+            [class.active]="currentSide[0]"
+            alt="Camiseta Banana Club">
+
+          <img
+            class="merch-back"
+            src="assets/images/camiseta1back.jpg"
+            [class.active]="!currentSide[0]"
+            alt="Camiseta Banana Club espalda">
+
+          <button class="arrow left"
+                  (click)="toggleSide(0); $event.preventDefault(); $event.stopPropagation()">‹</button>
+
+          <button class="arrow right"
+                  (click)="toggleSide(0); $event.preventDefault(); $event.stopPropagation()">›</button>
+
+        </div>
+
+      </a>
+
+
+      <!-- ITEM 2 -->
+      <a class="merch-card" href="https://deejayskin.com/product/camiseta-fm-3-banana-club/" target="_blank">
+
+        <div class="merch-carousel">
+
+          <img
+            class="merch-front"
+            src="assets/images/camiseta2.jpg"
+            [class.active]="currentSide[1]">
+
+          <img
+            class="merch-back"
+            src="assets/images/camiseta2back.jpg"
+            [class.active]="!currentSide[1]">
+
+          <button class="arrow left"
+                  (click)="toggleSide(1); $event.preventDefault(); $event.stopPropagation()">‹</button>
+
+          <button class="arrow right"
+                  (click)="toggleSide(1); $event.preventDefault(); $event.stopPropagation()">›</button>
+
+        </div>
+
+      </a>
+
+
+      <!-- ITEM 3 -->
+      <a class="merch-card" href="https://deejayskin.com/product/sudadera-con-capucha-fm-3-banana-club/" target="_blank">
+
+        <div class="merch-carousel">
+
+          <img
+            class="merch-front"
+            src="assets/images/sudadera.jpg"
+            [class.active]="currentSide[2]">
+
+          <img
+            class="merch-back"
+            src="assets/images/sudadera1back.jpg"
+            [class.active]="!currentSide[2]">
+
+          <button class="arrow left"
+                  (click)="toggleSide(2); $event.preventDefault(); $event.stopPropagation()">‹</button>
+
+          <button class="arrow right"
+                  (click)="toggleSide(2); $event.preventDefault(); $event.stopPropagation()">›</button>
+
+        </div>
+
+      </a>
+
+
+      <!-- ITEM 4 -->
+      <a class="merch-card" href="https://deejayskin.com/product/sudadera-fm-3-banana-club/" target="_blank">
+
+        <div class="merch-carousel">
+
+          <img
+            class="merch-front"
+            src="assets/images/sudadera2.jpg"
+            [class.active]="currentSide[3]">
+
+          <img
+            class="merch-back"
+            src="assets/images/sudadera2back.jpg"
+            [class.active]="!currentSide[3]">
+
+          <button class="arrow left"
+                  (click)="toggleSide(3); $event.preventDefault(); $event.stopPropagation()">‹</button>
+
+          <button class="arrow right"
+                  (click)="toggleSide(3); $event.preventDefault(); $event.stopPropagation()">›</button>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+<app-footer></app-footer>

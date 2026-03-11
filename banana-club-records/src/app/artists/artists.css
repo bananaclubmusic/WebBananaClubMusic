@@ -174,9 +174,12 @@
 }
 
 
-/* MODAL: SIEMPRE EN COLOR */
-.artist-modal img {
-  filter: grayscale(0%) contrast(1) !important;
+
+
+/* MODAL en color por defecto */
+.artist-modal .carousel-track img {
+  filter: grayscale(0%) contrast(1);
+  transition: filter 0.35s ease;
 }
 
 
@@ -619,3 +622,6 @@
   }
 
 }
+
+
+

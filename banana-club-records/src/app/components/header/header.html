@@ -27,7 +27,11 @@
 
         <a *ngIf="router.url !== '/vinilos'" routerLink="/vinilos" (click)="toggleMenu()">Vinilos</a>
 
+        <a *ngIf="router.url !== '/merch'" routerLink="/merch" (click)="toggleMenu()">Merch</a>
+
         <a *ngIf="router.url !== '/about'" routerLink="/about" (click)="toggleMenu()">Sobre Nosotros</a>
+
+
 
       </nav>
 
@@ -48,6 +52,8 @@
     <a *ngIf="router.url !== '/artists'" routerLink="/artists" routerLinkActive="active">Artistas</a>
 
     <a *ngIf="router.url !== '/vinilos'" routerLink="/vinilos" routerLinkActive="active">Vinilos</a>
+
+    <a *ngIf="router.url !== '/merch'" routerLink="/merch" routerLinkActive="active">Merch</a>
 
     <a *ngIf="router.url !== '/about'" routerLink="/about" routerLinkActive="active">Sobre Nosotros</a>
 

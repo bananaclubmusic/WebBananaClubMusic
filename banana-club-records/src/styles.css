@@ -110,3 +110,6 @@ body.menu-open .vinyl-card img {
   filter: grayscale(100%) contrast(1.1) !important;
 }
 
+body.menu-open .artist-modal img {
+  filter: grayscale(100%) contrast(1.1) !important;
+}

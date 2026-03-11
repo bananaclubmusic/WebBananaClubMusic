@@ -267,11 +267,12 @@
 /* Movil pequeño Breakpoints */
 @media (max-width: 480px) {
   .floating-bg {
-    width: 26vh;
-    height: 26vh;
-    opacity: 0.04;
+    width: 32vh;
+    height: 32vh;
+    opacity: 0.20;
   }
 }
+
 
 @media (max-width: 480px) {
 
