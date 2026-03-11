@@ -135,6 +135,40 @@
 }
 
 
+@media (hover: none) {
+
+  @supports (animation-timeline: view()) {
+
+    .vinyl-card {
+
+      opacity: 0;
+      transform: translateY(40px);
+
+      animation: vinylFade linear forwards;
+
+      animation-timeline: view();
+      animation-range: entry 15% cover 40%;
+
+    }
+
+  }
+
+}
+
+@keyframes vinylFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
 
 .vinyl-card:hover img {
   transform: scale(1.08);
