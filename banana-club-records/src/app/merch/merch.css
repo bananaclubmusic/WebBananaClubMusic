@@ -37,6 +37,8 @@
   letter-spacing: 0.1em;
   margin-bottom: 40px;
   text-align: center;
+  display: block;
+
 
   color: var(--text-primary);
   filter: drop-shadow(0 0 2px var(--accent-yellow-glow));
@@ -178,6 +180,13 @@
   .merch-grid {
     grid-template-columns: 1fr;
     max-width: 340px;
+  }
+  .merch-title {
+    text-align: center;
+    width: 100%;
+  }
+  .merch-content {
+    padding: 0 24px;
   }
 
 }

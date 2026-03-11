@@ -103,9 +103,9 @@ export class Artists {
       images: [
         'assets/images/guau.jpg',
       ],
-      description: 'Raul AKA Guau es la persona detrás de la imagen de Banana Club.' +
+      description: 'Raul AKA Guau es la persona detrás de la imagen de Banana Club. ' +
         'Es también el diseñador de sellos como 83, Close Your Eyes, Etiqueta Negra y colaborador principal ' +
-        'en proyectos como Waxport y Elektroshok Records',
+        'en proyectos como Waxport y Elektroshok Records.',
       instagram: 'https://www.instagram.com/guau83_/',
       soundcloud: 'https://soundcloud.com/guau',
       beatport: 'https://www.beatport.com/es/artist/guau/117449',
