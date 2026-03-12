@@ -234,10 +234,12 @@ export class Artists {
 
   openModal(artist: Artist) {
     this.activeArtist = artist;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
     this.activeArtist = null;
+    document.body.style.overflow = 'auto';
   }
 
   menuOpen = false;

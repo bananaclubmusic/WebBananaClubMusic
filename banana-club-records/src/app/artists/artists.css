@@ -202,6 +202,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+
 }
 
 /* MODAL = MISMA ESTRUCTURA QUE .bio-card */
