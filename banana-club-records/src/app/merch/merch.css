@@ -40,6 +40,7 @@
   display: block;
 
 
+
   color: var(--text-primary);
   filter: drop-shadow(0 0 2px var(--accent-yellow-glow));
 }
@@ -215,6 +216,7 @@
   .merch-title {
     text-align: center;
     width: 100%;
+    transform: translateX(-6px);
   }
   .merch-content {
     padding: 0 24px;

@@ -29,7 +29,7 @@ export class Artists {
     {
       name: 'Bowser',
       images: [
-        'assets/images/bowser3.JPG'
+        'assets/images/bowser3.jpg'
       ],
       description: 'Tras varios años de trayectoria en la producción musical, Bowser se ha consolidado ' +
         'como uno de los nombres más reconocidos de la escena Breakbeat. Su pasión por los ritmos rotos ' +
@@ -127,7 +127,7 @@ export class Artists {
     {
       name: 'MBreaks',
       images: [
-        'assets/images/mbreaks.JPG',
+        'assets/images/mbreaks.jpg',
       ],
       description: 'Carmen, también conocida como MBreaks, es una estrella en ' +
         'constante ascenso en la escena del Breakbeat y UKG en España. ' +
