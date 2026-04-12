@@ -25,20 +25,21 @@
 
     <div class="merch-grid">
 
+
       <!-- ITEM 1 -->
-      <a class="merch-card" href="https://deejayskin.com/product/camiseta-fm-3-banana-club/" target="_blank">
+      <a class="merch-card" href="https://www.instagram.com/fmguion3/" target="_blank">
 
         <div class="merch-carousel">
 
           <img
             class="merch-front"
-            src="assets/images/camiseta1.jpg"
+            src="assets/images/ambientador1.png"
             [class.active]="currentSide[0]"
             alt="Camiseta Banana Club">
 
           <img
             class="merch-back"
-            src="assets/images/camiseta1back.jpg"
+            src="assets/images/ambientador2.png"
             [class.active]="!currentSide[0]"
             alt="Camiseta Banana Club espalda">
 
@@ -52,7 +53,6 @@
 
       </a>
 
-
       <!-- ITEM 2 -->
       <a class="merch-card" href="https://deejayskin.com/product/camiseta-fm-3-banana-club/" target="_blank">
 
@@ -60,13 +60,15 @@
 
           <img
             class="merch-front"
-            src="assets/images/camiseta2.jpg"
-            [class.active]="currentSide[1]">
+            src="assets/images/camiseta1.jpg"
+            [class.active]="currentSide[1]"
+            alt="Camiseta Banana Club">
 
           <img
             class="merch-back"
-            src="assets/images/camiseta2back.jpg"
-            [class.active]="!currentSide[1]">
+            src="assets/images/camiseta1back.jpg"
+            [class.active]="!currentSide[1]"
+            alt="Camiseta Banana Club espalda">
 
           <button class="arrow left"
                   (click)="toggleSide(1); $event.preventDefault(); $event.stopPropagation()">‹</button>
@@ -80,18 +82,18 @@
 
 
       <!-- ITEM 3 -->
-      <a class="merch-card" href="https://deejayskin.com/product/sudadera-con-capucha-fm-3-banana-club/" target="_blank">
+      <a class="merch-card" href="https://deejayskin.com/product/camiseta-fm-3-banana-club/" target="_blank">
 
         <div class="merch-carousel">
 
           <img
             class="merch-front"
-            src="assets/images/sudadera.jpg"
+            src="assets/images/camiseta2.jpg"
             [class.active]="currentSide[2]">
 
           <img
             class="merch-back"
-            src="assets/images/sudadera1back.jpg"
+            src="assets/images/camiseta2back.jpg"
             [class.active]="!currentSide[2]">
 
           <button class="arrow left"
@@ -106,18 +108,18 @@
 
 
       <!-- ITEM 4 -->
-      <a class="merch-card" href="https://deejayskin.com/product/sudadera-fm-3-banana-club/" target="_blank">
+      <a class="merch-card" href="https://deejayskin.com/product/sudadera-con-capucha-fm-3-banana-club/" target="_blank">
 
         <div class="merch-carousel">
 
           <img
             class="merch-front"
-            src="assets/images/sudadera2.jpg"
+            src="assets/images/sudadera.jpg"
             [class.active]="currentSide[3]">
 
           <img
             class="merch-back"
-            src="assets/images/sudadera2back.jpg"
+            src="assets/images/sudadera1back.jpg"
             [class.active]="!currentSide[3]">
 
           <button class="arrow left"
@@ -125,6 +127,32 @@
 
           <button class="arrow right"
                   (click)="toggleSide(3); $event.preventDefault(); $event.stopPropagation()">›</button>
+
+        </div>
+
+      </a>
+
+
+      <!-- ITEM 5 -->
+      <a class="merch-card" href="https://deejayskin.com/product/sudadera-fm-3-banana-club/" target="_blank">
+
+        <div class="merch-carousel">
+
+          <img
+            class="merch-front"
+            src="assets/images/sudadera2.jpg"
+            [class.active]="currentSide[4]">
+
+          <img
+            class="merch-back"
+            src="assets/images/sudadera2back.jpg"
+            [class.active]="!currentSide[4]">
+
+          <button class="arrow left"
+                  (click)="toggleSide(4); $event.preventDefault(); $event.stopPropagation()">‹</button>
+
+          <button class="arrow right"
+                  (click)="toggleSide(4); $event.preventDefault(); $event.stopPropagation()">›</button>
 
         </div>
 

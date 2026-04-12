@@ -13,7 +13,7 @@ import {Header} from '../components/header/header';
 })
 export class Merch {
 
-  currentSide: boolean[] = [true, true, true, true];
+  currentSide: boolean[] = [true, true, true, true, true];
 
   toggleSide(index: number) {
     this.currentSide[index] = !this.currentSide[index];

@@ -213,6 +213,21 @@ export class Artists {
       soundcloud: 'https://soundcloud.com/sellrude',
       beatport: 'https://www.beatport.com/es/artist/sellrude/753458',
       currentIndex: 0
+    },
+    {
+      name: 'Tomy',
+      images: [
+        'assets/images/tomy.jpeg',
+      ],
+      description: ' Entre Huelva y Sevilla nace uno de los DJ y productores referentes del Breakbeat ' +
+        'y UK Garage en España. Ha publicado en los mejores sellos españoles, ' +
+        'y ha llevado su sonido por todo el país en salas míticas como Pandora o Industrial Copera. ' +
+        'También ha actuado en festivales de alto calibre como Elrow, pasando por Barcelona y emisoras de radio en Londres.',
+
+      instagram: 'https://www.instagram.com/tomytomytomytomy_',
+      soundcloud: 'https://soundcloud.com/tomybreaks',
+      beatport: 'https://www.beatport.com/es/artist/tomy/479402',
+      currentIndex: 0
     }
   ];
 
