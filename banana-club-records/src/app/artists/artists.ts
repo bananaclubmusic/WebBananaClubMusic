@@ -231,6 +231,8 @@ export class Artists {
     }
   ];
 
+
+
   toggleArtist(index: number) {
     this.openIndex = this.openIndex === index ? null : index;
   }
@@ -246,15 +248,23 @@ export class Artists {
   }
 
   activeArtist: Artist | null = null;
+  scrollPosition = 0;
 
   openModal(artist: Artist) {
     this.activeArtist = artist;
-    document.body.style.overflow = 'hidden';
+
+    this.scrollPosition = window.scrollY;
+    document.body.classList.add('modal-open');
+    document.body.style.top = `-${this.scrollPosition}px`;
   }
 
   closeModal() {
     this.activeArtist = null;
-    document.body.style.overflow = 'auto';
+
+    document.body.classList.remove('modal-open');
+
+    window.scrollTo(0, this.scrollPosition);
+    document.body.style.top = '';
   }
 
   menuOpen = false;

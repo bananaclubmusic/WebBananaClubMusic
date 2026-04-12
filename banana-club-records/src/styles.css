@@ -40,6 +40,11 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
 
 /* Layout Containers */
 .container {
